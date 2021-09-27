@@ -2,6 +2,9 @@
 
 // $today = date('Y-m-d H:i:s l');
 require('../app/functions.php');
+
+
+
 // $names = [
 //   'taro',
 //   'jiro',
@@ -18,16 +21,18 @@ require('../app/functions.php');
 // $color = filter_input(INPUT_GET, 'color');
 // $color = isset($color) ? $color : 'None selected';
 // $color = $color ?? 'None selected';
-$colorFromGet = filter_input(INPUT_GET, 'color') ?? 'transparent' ;
-setcookie('color', $colorFromGet);
+// $colorFromGet = filter_input(INPUT_GET, 'color') ?? 'transparent' ;
+// setcookie('color', $colorFromGet);
+// $_SESSION['color'] = $colorFromGet;
 
 include('../app/_parts/_header.php');
 
 ?>
 
+<p>Message added</p>
 <p><?#= nl2br(h($message)); ?></p>
 <!-- <p><?#= h($colors); ?></p> -->
-<p><?= h($colorFromGet); ?></p>
+<!-- <p><?#= h($colorFromGet); ?></p> -->
 <p><a href="index.php">Go back</a></p>
 
 <?php
